@@ -1,11 +1,16 @@
 import Header from '../header/header';
 import PlaceCard from '../place-card/place-card';
+import Offers from '../../mocks/offers';
+import {OfferList} from '../../types/offers';
 
 type MainScreenProps = {
   hotelsCount : number;
+  offers: OfferList;
 };
 
-function MainScreen({hotelsCount} : MainScreenProps): JSX.Element {
+
+function MainScreen({hotelsCount, offers} : MainScreenProps): JSX.Element {
+  offers = Offers;
   return (
     <div className="page page--gray page--main">
       <Header />
@@ -61,7 +66,7 @@ function MainScreen({hotelsCount} : MainScreenProps): JSX.Element {
                     <use xlinkHref="#icon-arrow-select"></use>
                   </svg>
                 </span>
-                <ul className="places__options places__options--custom places__options--opened">
+                <ul className="places__options places__options--custom">
                   <li className="places__option places__option--active" tabIndex={0}>Popular</li>
                   <li className="places__option" tabIndex={0}>Price: low to high</li>
                   <li className="places__option" tabIndex={0}>Price: high to low</li>
@@ -69,11 +74,12 @@ function MainScreen({hotelsCount} : MainScreenProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
+                {/* <PlaceCard></PlaceCard>
                 <PlaceCard></PlaceCard>
                 <PlaceCard></PlaceCard>
                 <PlaceCard></PlaceCard>
-                <PlaceCard></PlaceCard>
-                <PlaceCard></PlaceCard>
+                <PlaceCard></PlaceCard> */}
+                {offers.map((offer)=>{<PlaceCard offer={offer}></PlaceCard>;})}
               </div>
             </section>
             <div className="cities__right-section">

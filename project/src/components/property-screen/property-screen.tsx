@@ -1,6 +1,11 @@
 import Header from '../header/header';
+import Comments from '../../types/comments';
 
-function PropertyScreen():JSX.Element {
+type PropertyScreenProps = {
+  comments: Comments;
+};
+
+function PropertyScreen({ comments }: PropertyScreenProps ):JSX.Element {
   return(
     <div className="page">
       <Header />
