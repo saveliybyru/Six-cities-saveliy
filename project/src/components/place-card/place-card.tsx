@@ -38,7 +38,7 @@ function PlaceCard({offer, screenFavorite}: PlaceCardProps):JSX.Element {
             </div>
           </div>
           <h2 className="place-card__name">
-            <Link to="#">{title}</Link>
+            <Link to={`offer/${id}`}>{title}</Link>
           </h2>
           <p className="place-card__type">{type}</p>
         </div>
@@ -75,7 +75,7 @@ function PlaceCard({offer, screenFavorite}: PlaceCardProps):JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to="#">{title}</Link>
+          <Link to={`offer/${id}`}>{title}</Link>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>

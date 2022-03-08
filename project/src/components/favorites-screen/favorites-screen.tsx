@@ -3,6 +3,7 @@ import Header from '../header/header';
 import { OfferList } from '../../types/offers';
 import Offers from '../../mocks/offers';
 import PlaceCard from '../place-card/place-card';
+import { AppRoute } from '../../const';
 
 type FavoritesScreenProps = {
   offers: OfferList;
@@ -22,7 +23,7 @@ function FavoritesScreen({offers}: FavoritesScreenProps): JSX.Element {
               <li className="favorites__locations-items">
                 <div className="favorites__locations locations locations--current">
                   <div className="locations__item">
-                    <Link className="locations__item-link" to="/">
+                    <Link className="locations__item-link" to={AppRoute.Main}>
                       <span>Amsterdam</span>
                     </Link>
                   </div>
@@ -36,7 +37,7 @@ function FavoritesScreen({offers}: FavoritesScreenProps): JSX.Element {
         </div>
       </main>
       <footer className="footer container">
-        <Link className="footer__logo-link" to="main.html">
+        <Link className="footer__logo-link" to={AppRoute.Main}>
           <img className="footer__logo" src="img/logo.svg" alt="6 cities logo" width="64" height="33" />
         </Link>
       </footer>
