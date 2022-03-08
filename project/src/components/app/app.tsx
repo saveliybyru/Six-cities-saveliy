@@ -19,7 +19,7 @@ function App({ hotelsCount, offers}: AppScreenProps): JSX.Element {
     <BrowserRouter>
       <Routes>
         <Route path={AppRoute.Main} element={<MainScreen hotelsCount={hotelsCount}  offers={offers}/>}>
-          <Route path={AppRoute.Room} element={<PropertyScreen/>} />
+          <Route path={`${AppRoute.Room}/:id`} element={<PropertyScreen/>} />
         </Route>
         <Route path={AppRoute.Login} element={<LoginScreen/>} />
         <Route
