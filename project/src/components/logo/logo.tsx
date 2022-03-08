@@ -1,19 +1,22 @@
+import { Link } from 'react-router-dom';
+import { AppRoute } from '../../const';
 type Logo = {
   isActive: boolean
   }
 
 function Logo({isActive}:Logo):JSX.Element {
+
   if (isActive){
     return (
-      <a className='header__logo-link header__logo-link--active'>
+      <Link className='header__logo-link header__logo-link--active' to=''>
         <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
-      </a> );
-  } else {
-    return  (
-      <a className='header__logo-link' href='/'>
-        <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
-      </a> );
+      </Link> );
   }
+
+  return  (
+    <Link className='header__logo-link' to={AppRoute.Main}>
+      <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
+    </Link> );
 }
 
 export default Logo;

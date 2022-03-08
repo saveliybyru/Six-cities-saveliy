@@ -6,22 +6,25 @@ import LoginScreen from '../login-screen/login-screen';
 import MainScreen from '../main-screen/main-screen';
 import PrivateRoute from '../private-route/private-route';
 import PropertyScreen from '../property-screen/property-screen';
+import {OfferList} from '../../types/offers';
 
 type AppScreenProps = {
   hotelsCount: number;
+  offers: OfferList;
 };
 
 
-function App({ hotelsCount }: AppScreenProps): JSX.Element {
+function App({ hotelsCount, offers}: AppScreenProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.Main} element={<MainScreen hotelsCount={hotelsCount}/>} />
+        <Route path={AppRoute.Main} element={<MainScreen hotelsCount={hotelsCount}  offers={offers}/>}>
+          <Route path={`${AppRoute.Room}/:id`} element={<PropertyScreen/>} />
+        </Route>
         <Route path={AppRoute.Login} element={<LoginScreen/>} />
-        <Route path={AppRoute.Room} element={<PropertyScreen />} />
         <Route
           path={AppRoute.Favorites}
-          element={<PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}><FavoritesScreen /></PrivateRoute>}
+          element={<PrivateRoute authorizationStatus={AuthorizationStatus.Auth}><FavoritesScreen offers={offers}/></PrivateRoute>}
         />
         <Route path='*' element={<ErrorScreen />} />
       </Routes>
