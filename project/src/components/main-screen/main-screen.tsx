@@ -3,14 +3,20 @@ import Header from '../header/header';
 import Offers from '../../mocks/offers';
 import {OfferList} from '../../types/offers';
 import PlacesList from '../places-list/places-list';
+import MapScheme from '../map-scheme/map-scheme';
 
 type MainScreenProps = {
   hotelsCount : number;
   offers: OfferList;
+  city:{
+      title: string;
+      lat: number;
+      lng: number;
+      zoom: number;}
 };
 
 
-function MainScreen({hotelsCount, offers} : MainScreenProps): JSX.Element {
+function MainScreen({hotelsCount, offers, city} : MainScreenProps): JSX.Element {
   offers = Offers;
   return (
     <div className="page page--gray page--main">
@@ -77,7 +83,7 @@ function MainScreen({hotelsCount, offers} : MainScreenProps): JSX.Element {
               <PlacesList offers={offers}/>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <section className="cities__map map"><MapScheme offers={offers} city={city}/></section>
             </div>
           </div>
         </div>

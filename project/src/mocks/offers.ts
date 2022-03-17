@@ -4,8 +4,8 @@ const Offers: OfferList = [
     'city': {
       'name': 'Cologne',
       'location': {
-        'latitude': 50.938361,
-        'longitude': 6.959974,
+        'latitude': 52.3909553943508,
+        'longitude': 4.85309666406198,
         'zoom': 13,
       },
     },
@@ -54,8 +54,8 @@ const Offers: OfferList = [
     },
     'description': 'I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!',
     'location': {
-      'latitude': 50.916361,
-      'longitude': 6.944974,
+      'latitude': 52.3909553943508,
+      'longitude': 4.85309666406198,
       'zoom': 16,
     },
     'id': 1,
@@ -64,8 +64,8 @@ const Offers: OfferList = [
     'city': {
       'name': 'Hamburg',
       'location': {
-        'latitude': 53.550341,
-        'longitude': 10.000654,
+        'latitude': 52.369553943508,
+        'longitude': 4.85309666406198,
         'zoom': 13,
       },
     },
@@ -111,8 +111,8 @@ const Offers: OfferList = [
     },
     'description': 'I am happy to welcome you to my apartment in the city center! Three words: location, cosy and chic!',
     'location': {
-      'latitude': 53.529341,
-      'longitude': 9.975654,
+      'latitude': 52.369553943508,
+      'longitude': 4.85309666406198,
       'zoom': 16,
     },
     'id': 3,
@@ -121,8 +121,8 @@ const Offers: OfferList = [
     'city': {
       'name': 'Brussels',
       'location': {
-        'latitude': 50.846557,
-        'longitude': 4.351697,
+        'latitude': 52.3909553943508,
+        'longitude': 4.929309666406198,
         'zoom': 13,
       },
     },
@@ -172,8 +172,8 @@ const Offers: OfferList = [
     },
     'description': 'Peaceful studio in the most wanted area in town. Quiet house Near of everything. Completely renovated. Lovely neighbourhood, lot of trendy shops, restaurants and bars in a walking distance.',
     'location': {
-      'latitude': 50.854557,
-      'longitude': 4.364697,
+      'latitude': 52.3909553943508,
+      'longitude': 4.929309666406198,
       'zoom': 16,
     },
     'id': 10,
@@ -182,8 +182,8 @@ const Offers: OfferList = [
     'city': {
       'name': 'Cologne',
       'location': {
-        'latitude': 50.938361,
-        'longitude': 6.959974,
+        'latitude': 52.3809553943508,
+        'longitude': 4.939309666406198,
         'zoom': 13,
       },
     },
@@ -229,8 +229,8 @@ const Offers: OfferList = [
     },
     'description': 'Design interior in most sympathetic area! Complitely renovated, well-equipped, cosy studio in idyllic, over 100 years old wooden house. Calm street, fast connection to center and airport.',
     'location': {
-      'latitude': 50.959361,
-      'longitude': 6.978974,
+      'latitude': 52.3809553943508,
+      'longitude': 4.939309666406198,
       'zoom': 16,
     },
     'id': 11,

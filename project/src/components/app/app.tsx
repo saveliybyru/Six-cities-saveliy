@@ -1,5 +1,5 @@
 import { Route, BrowserRouter, Routes} from 'react-router-dom';
-import { AppRoute, AuthorizationStatus } from '../../const';
+import { AppRoute, AuthorizationStatus, CITY } from '../../const';
 import ErrorScreen from '../error-screen/error-screen';
 import FavoritesScreen from '../favorites-screen/favorites-screen';
 import LoginScreen from '../login-screen/login-screen';
@@ -18,7 +18,7 @@ function App({ hotelsCount, offers}: AppScreenProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.Main} element={<MainScreen hotelsCount={hotelsCount}  offers={offers}/>}>
+        <Route path={AppRoute.Main} element={<MainScreen hotelsCount={hotelsCount}  offers={offers} city={CITY}/>}>
           <Route path={`${AppRoute.Room}/:id`} element={<PropertyScreen/>} />
         </Route>
         <Route path={AppRoute.Login} element={<LoginScreen/>} />
